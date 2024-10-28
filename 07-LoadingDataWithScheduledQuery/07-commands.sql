@@ -1,5 +1,5 @@
 ###############################################################
-############## Data Ingestion with COPY INTO ##################
+############## Loading data with a Scheduled Query ############
 ###############################################################
 
 ## Have two tables
@@ -84,13 +84,6 @@ FORMAT_OPTIONS('header' = 'true');
 
 ## You'll see an entry for the COPY INTO query
 
-## As it is running - click on the query and see the Query Details
-
-## Click on "See query profile"
-
-## Show the graph -> click on each box in the graph
-
-
 ## Head to the Query editor and to CreateReadEmployeesDelta
 
 ## Run the following
@@ -112,7 +105,7 @@ SELECT * FROM company.Employees;;
 
 ## The new rows are visible
 
-## Go to DBFS and add employees-03.csv as well
+## Go to the volume and add employees-03.csv as well
 ## After a minute, rerun the SELECT query - the new row should show up
 SELECT * FROM company.Employees;;
 

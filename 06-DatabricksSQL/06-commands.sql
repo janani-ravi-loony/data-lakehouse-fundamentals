@@ -35,7 +35,7 @@ Type: Managed Volume
 
 winemag_data.csv
 
-## Navigate to the "SQL Editor" on the new tab
+## Navigate to the SQL workspace on the new tab
 
 ## In order to run queries we need our loony-sql-warehouse
 
@@ -81,21 +81,19 @@ COPY INTO wine.allwinereviews
 FROM (
   SELECT id::int, country, designation, points::int, price::int,
          province, region, title, variety, winery 
-  FROM '/Volumes/loony_db_ws/default/wine_data_volume/winemag_data.csv'
+  FROM '/Volumes/loony_databricks_ws/default/wine_data_volume/winemag_data.csv'
 )
 FILEFORMAT = CSV
 FORMAT_OPTIONS('header' = 'true');
 
 
 # On the left select the volume and show how we can get the path to any volume to access it
-# Click on the 3 dots and copy volume path
-# Or you can select the file and copy the volume filepath
+
 
 
 ## On the left navigation pane switch the database to wine and show the table
 ## in there
-## Click on the 3 dots next to the table -> Preview in new tab
-## Run the query and show the result
+
 
 SELECT country, province, region,
        points, price
@@ -106,17 +104,11 @@ AND country IS NOT NULL
 AND province IS NOT NULL
 AND region IS NOT NULL;
 
-## Remove the limit (1000) and run
+## Remove the limit (1000) abd ryb
 
 
 ## Save query as (Cmd + S)
 Wine Geography
-
-## Go to Queries and show the saved query
-## Go to query history and show history
-
-
-## Go back to the query
 
 ## Note that each query can have multiple associated visualizations
 ## Though not explicitly stated in the docs, its almost as though 
@@ -161,44 +153,21 @@ Share of Wines by Country
 Province Word Cloud
 
 
-# Click on Add Filter
-# Choose Country
-
-# Show how the filter works
-
 #############################################
 
-# Now click on the drop down next to any visualization -> Add to Dashboard
+## Go to Dashboards using the left navigation pane
 
-# Add all the visualizations to the dashboard.
+# Create a new dashboard
 
-# Show the dashboard (the word cloud will not work)
+Wine Dashboard
 
-# Change the word cloud to the scatter plot
+# Go back to the Query Editor and click on the 3 dots next to one of the visualizations
 
-X-axis: points
-Y-axis: price
+# Add to dashboard -> Existing dashboard
 
-# Use the filter and show
+# Select all visualizations -> Add them to the Wine Dashboard
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# If there is time, add a filter and show (filter by Country)
 
 
 

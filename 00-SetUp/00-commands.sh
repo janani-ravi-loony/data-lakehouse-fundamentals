@@ -10,12 +10,14 @@ Do all of this as a part of prework
 # Workspace
 # ---------
 
-## Provision a Databricks workspace in the East US 2 region
+## Provision a Databricks workspace in the "East US" region
 
 loony-databricks-rg
 loony-db-ws
 
-## This region has the Standard DADSv5 Family vCPUs which we will use for
+## TODO: Need to figure this out
+
+## This region has the Standard_D4ads_v5 Family vCPUs which we will use for
 ## Delta cache acceleration
 
 
@@ -27,13 +29,14 @@ loony-db-ws
 ## The name is to set it apart from a "Delta Cache Accelerated" cluster to be set up later
 ## The cluster has the following config
 ####	- mode => Single Node
-####	- Node Type => Standard_DS3_v2 node (14GB mem and 4 cores).
+####	- Node Type => Standard_D3_v2 node (14GB mem and 4 cores - we only have quota for this).
 
+## TODO: Need to figure this out
 
 ## Create a second cluster called loony-cluster-delta-acc
 ## The cluster has the following config
 ####	- mode => Single Node
-####	- Node Type => Standard_L4s (16G mem, 4 cores) (Delta Cache Accelerated)
+####	- Node Type => Standard_D4ads_v5 (16G mem, 4 cores) (Delta Cache Accelerated)
 
 
 # AWS source for streaming
@@ -129,7 +132,22 @@ Serverless
 
 # Click on create
 
-# Can delete the existing warehouse
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

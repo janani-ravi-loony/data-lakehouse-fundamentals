@@ -1,4 +1,4 @@
-# Click on +New from the top left -> File Upload
+# Click on +New from the top left -> Add or upload data
 
 # This will take you to the same page
 

@@ -13,7 +13,7 @@ Create a delta table by uploading a file
 Create the table in workspace catalog
 ------------------------------------------
 
-# Click on +New from the top left -> Add Data
+# Click on +New from the top left -> Add or upload data
 
 # Show all the ways that you can ingest data
 
@@ -24,10 +24,6 @@ Create the table in workspace catalog
 
 # This will bring you to a page
 
-
-# Click on +New from the top left -> File Upload
-
-# This will take you to the same page
 
 # Drag the Employees.csv file to the page
 
@@ -41,11 +37,7 @@ Create the table in workspace catalog
 
 # All users in your workspace can create assets in the default schema in this catalog. By default, this catalog is bound to your workspace, which means that it can only be accessed through your workspace. Automatic provisioning of the workspace catalog at workspace creation is rolling out gradually across accounts.
 
-# Databricks strongly recommends using the Unity Catalog for data access management. The Unity Catalog offers a more straightforward and account-centered governance model.
-
-# A default catalog is configured for each workspace that is enabled for Unity Catalog.
-
-# If you omit the top-level catalog name when you perform data operations, the default catalog is assumed. 
+# Databricks strongly recommends using the Unity Catalog for data access management. The Unity Catalog offers a more straightforward and account-centered governance model. 
 
 ############################
 
@@ -65,13 +57,10 @@ Table name: all_employees
 
 # Note that this is a Delta table
 
-# Note the AI generated comment - accept the comment
+# Hover over the columns of the table
 
-# Click on "AI generate"
+# Show how you can add comments using AI (comments are pretty bad)
 
-# Show auto-generated descriptions for each column
-
-# Accept the generated descriptions
 
 # Click on the various tabs and show
 
@@ -108,8 +97,6 @@ Create the table using the hive metastore
 ############################
 # Notes
 
-# https://community.databricks.com/t5/data-engineering/hive-metastore-table-access-control-end-of-support/td-p/50487
-
 # Hive metastore table access control is a legacy data governance model within Databricks - when you set up your production level tables using this is not recommended
 
 # Currently, there is no official announcement regarding the end of support for Hive metastore table access control.
@@ -121,7 +108,7 @@ Create the table using the hive metastore
 ############################
 
 
-# Click on +New from the top left -> File Upload
+# Click on +New from the top left -> Add or upload data
 
 # This will take you to the same page
 
@@ -131,6 +118,8 @@ Create the table using the hive metastore
 Catalog: hive metastore
 Schema: default
 Table name: employees
+
+# Click on "Create table"
 
 # Note that we can have the same table name under different schemas (however I have chosen different names so we can differentiate the tables)
 
@@ -142,10 +131,6 @@ Sample Data
 Details
 
 # Here notice the storage location - this is stored in DBFS associated with the current workspace. We can access and view the contents of this location
-
-# The term DBFS comes from Databricks File System, which describes the distributed file system used by Azure Databricks to interact with cloud-based storage.
-
-
 
 Permissions
 History
@@ -166,6 +151,7 @@ Import
 
 # Import "CreateTables.html"
 
+# Connect to the "loony-cluster-regular"
 
 
 
